@@ -73,7 +73,7 @@ void draw() {
     }
     PVector[] vEctors = new PVector[6];
 
-    rotateY(xRot);
+    rotateY(PI/1.5 + xRot);
     rotateZ(yRot);
     emissive(stair?stair_on:stair_off);
     beginShape();
@@ -162,7 +162,11 @@ void draw() {
     c.text("If the lights above the stage are on, the stage lights are on.", 50, 500);
     c.text("Press a or d to switch between days.", 50, 700);
     c.text("Press f to flip between the key and visualisation", 50, 800);
+    c.fill(255,0,0);
+    c.textSize(50);
+    c.text("HOLD AND DRAG THE MOUSE TO MOVE \nTHE CAMERA",25, 900);
     c.textSize(45);
+    c.fill(0);
     c.text("Shayan Janjua", 980, 489);
     c.rect(970, 490, 500, 2);
     c.text("Northampton Square", 980, 549);
